@@ -12,7 +12,6 @@ export function Link ({navigation}) {
   }
 
   function generateQR () {
-
     if (!identificationValue) {
       Alert.alert(
         '',
@@ -30,8 +29,6 @@ export function Link ({navigation}) {
         'Insira um link válido'
       )
     }
-
-
   }
 
   return (
@@ -45,7 +42,7 @@ export function Link ({navigation}) {
             value={identificationValue}
             cursorColor={'#000'}
             keyboardType='url'
-            placeholder='Link: https:// ou www... '
+            placeholder='https:// ou www... '
             
           />
           <TouchableOpacity

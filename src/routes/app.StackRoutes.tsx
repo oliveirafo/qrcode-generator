@@ -1,20 +1,22 @@
-import { createStackNavigator } from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { MaterialIcons} from 'react-native-vector-icons'
+import { TouchableOpacity, View } from 'react-native';
 
-const { Navigator, Screen } = createStackNavigator();
-
-
+const { Navigator, Screen } = createNativeStackNavigator();
 
 import { AppTabRoutes } from './app.TabRoutes';
 import { Link } from '../screens/01_main/02_link';
 import { QRLink } from '../screens/01_main/02_link/QRLink';
 
 
+
 export function AppStackRoutes () {
   return (
-    <Navigator>
+    <Navigator screenOptions={{animation: 'fade_from_bottom'}}>
 
       <Screen
-        name='home' component={AppTabRoutes}
+        name='home' 
+        component={AppTabRoutes}
         options={{
           title: 'Home',
           headerShown: false
@@ -22,7 +24,8 @@ export function AppStackRoutes () {
       />
 
       <Screen
-        name='link' component={Link}
+        name='link' 
+        component={Link}
         options={{
           title: 'QR Code from Link',
           headerShown: true
@@ -30,7 +33,8 @@ export function AppStackRoutes () {
       />
 
       <Screen
-        name='QR' component={QRLink}
+        name='QR' 
+        component={QRLink}
         options={{
           title: 'Your QR Code',
           headerShown: true

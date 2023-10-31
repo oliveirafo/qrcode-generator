@@ -14,10 +14,10 @@ type OptionProps = {
 
 export function Main ({navigation}: any) {
 
-
-  function handleURL () {
+  function handleURL ()
+  {
     navigation.navigate('link')
-  } 
+  }
 
   function TouchableOption (props: OptionProps) {
     return ( 
@@ -44,11 +44,11 @@ export function Main ({navigation}: any) {
 
       <View className='flex-1 items-center justify-start w-full h-full '>
 
-      <TouchableOpacity 
+      <TouchableOpacity
         onPress={handleURL}
         className='items-center justify-start w-auto h-20 border-b-2 border-slate-300 bg-white px-2 gap-x-2'
       >
-        <TouchableOption 
+        <TouchableOption
           title={'URL'} 
           subtitle={'Insira um link para gerar o QR Code'} 
           iconFont={"world-o"} 
